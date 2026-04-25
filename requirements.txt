@@ -1,0 +1,17 @@
+pandas
+numpy
+pymongo
+matplotlib
+seaborn
+plotly
+scikit-learn
+mlflow
+fastapi
+uvicorn
+streamlit
+python-dotenv
+python-dateutil
+jupytergit 
+ipykernel
+joblib
+requests
