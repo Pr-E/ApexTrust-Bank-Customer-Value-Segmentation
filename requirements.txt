@@ -6,12 +6,12 @@ seaborn
 plotly
 scikit-learn
 mlflow
+dagshub
 fastapi
 uvicorn
 streamlit
 python-dotenv
 python-dateutil
-jupytergit 
 ipykernel
-joblib
 requests
+-e.
