@@ -447,6 +447,9 @@ Potential future enhancements include:
 * Deep learning customer embeddings
 * Personalised financial product recommendation
 * Churn prediction modeling
+* Cloud-native MLOps deployment
+* CI/CD automation
+* Automated retraining pipelines
 
 
 ---
