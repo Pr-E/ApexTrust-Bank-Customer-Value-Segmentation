@@ -445,12 +445,9 @@ Potential future enhancements include:
 * Real-time streaming analytics
 * Customer lifetime value prediction
 * Deep learning customer embeddings
-* Recommendation systems
-* Personalized financial product recommendation
+* Personalised financial product recommendation
 * Churn prediction modeling
-* Cloud-native MLOps deployment
-* CI/CD automation
-* Automated retraining pipelines
+
 
 ---
 
