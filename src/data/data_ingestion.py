@@ -1,28 +1,37 @@
+# NO 1     
 import pandas as pd
-from src.connections.mongodb_connection import MongoDBConnection
 import logging
 
+from config.constant import INPUT_DATA_PATH
+
 logging.basicConfig(
-    level = logging.DEBUG,
-    format = "%(asctime)s - %(levelname)s - %(message)s"
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
 )
+
 
 def data_ingestion():
     try:
-        # GET COLLECTION AND LOAD DATA
-        data_connector = MongoDBConnection()
-        collection = data_connector.get_collection()
-        df = pd.DataFrame(list(collection.find({})))
+        logging.info("Loading dataset from local storage...")
 
-        if "_id" in df.columns:
-            df = df.drop("_id", axis=1)
-        logging.info(f"data has been successfully loaded...")
-        print(df.head())
+        # =========================
+        # LOAD CSV
+        # =========================
+        df = pd.read_csv(INPUT_DATA_PATH)
+
+        logging.info(f"Dataset loaded successfully")
+        logging.info(f"Dataset Shape: {df.shape}")
+
         return df
 
     except Exception as e:
-        logging.error(f"error occured while loading the dataset from the database {e}")
-        return None 
+        logging.error(f"Error loading dataset: {e}")
+        raise
 
 
-data_ingestion()       
+# =========================
+# TEST
+# =========================
+if __name__ == "__main__":
+    df = data_ingestion()
+    print(df.head())

@@ -1,12 +1,14 @@
+# NO 2
 import pandas as pd
-import numpy as np
-from src.data.data_ingestion import data_ingestion
 import logging
+
+from src.data.data_ingestion import data_ingestion
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
+
 
 def data_validation(data: pd.DataFrame):
 
@@ -14,69 +16,77 @@ def data_validation(data: pd.DataFrame):
         customer_data = data.copy()
 
         # =========================
-        # DUPLICATES
+        # DUPLICATE CHECKS
         # =========================
         duplicates = customer_data.duplicated().sum()
-        duplicate_transaction = customer_data['TransactionID'].duplicated().sum()
 
-        logging.info(f"Total duplicate rows: {duplicates}")
+        duplicate_transaction = customer_data[
+            'TransactionID'
+        ].duplicated().sum()
+
+        logging.info(f"Duplicate Rows: {duplicates}")
         logging.info(f"Duplicate TransactionIDs: {duplicate_transaction}")
 
+        # Remove duplicate transaction IDs
         if duplicate_transaction > 0:
             customer_data = customer_data.drop_duplicates(
                 subset='TransactionID',
                 keep='first'
             )
-            logging.info("Duplicate TransactionIDs removed successfully")
+
+            logging.info("Duplicate TransactionIDs removed")
 
         # =========================
         # MISSING VALUES
         # =========================
         missing_values = customer_data.isna().sum()
-        logging.info(f"Missing values by column:\n{missing_values}")
+
+        logging.info(f"Missing Values:\n{missing_values}")
 
         customer_data = customer_data.dropna()
-        logging.info("Missing values successfully dropped")
+
+        logging.info("Missing values removed successfully")
 
         # =========================
-        # REMOVE SPECIFIC CUSTOMER
+        # REMOVE PROBLEMATIC CUSTOMER
         # =========================
-        before = len(customer_data)
-
         customer_data = customer_data[
             customer_data['CustomerID'] != 'C2867825'
         ]
 
-        after = len(customer_data)
-
-        logging.info(f"Removed {before - after} records for CustomerID C2867825")
+        logging.info("Problematic customer removed")
 
         # =========================
-        # OTHER CHECKS
+        # DATE CONVERSION
         # =========================
-        unique_customers = customer_data['CustomerID'].nunique()
-        gender_distribution = customer_data['CustGender'].value_counts()
-
-        logging.info(f"Unique Customers: {unique_customers}")
-        logging.info(f"Gender Distribution:\n{gender_distribution}")
-
-        # =========================
-        # DATE HANDLING
-        # =========================
-        customer_data["TransactionDate"] = pd.to_datetime(
+        customer_data['TransactionDate'] = pd.to_datetime(
             customer_data['TransactionDate'],
-            errors="coerce"
+            errors='coerce'
         )
 
-        logging.info("TransactionDate successfully converted")
+        logging.info("TransactionDate converted successfully")
+
+        # =========================
+        # BASIC CHECKS
+        # =========================
+        logging.info(
+            f"Unique Customers: {customer_data['CustomerID'].nunique()}"
+        )
 
         return customer_data
 
     except Exception as e:
-        logging.error(f"Error during data validation: {e}")
+        logging.error(f"Error during validation: {e}")
         raise
 
 
-# Run pipeline
-customer_data = data_ingestion()
-clean_data = data_validation(customer_data)
+# =========================
+# TEST
+# =========================
+if __name__ == "__main__":
+
+    customer_data = data_ingestion()
+
+    clean_data = data_validation(customer_data)
+
+    print(clean_data.head())
