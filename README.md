@@ -32,12 +32,19 @@ The platform transforms raw transactional banking data into actionable strategic
 The primary objective of this project is to build a scalable customer intelligence system capable of:
 
 ✅ Identifying high-value banking customers
+
 ✅ Detecting churn-risk customers early
+
 ✅ Understanding customer behavioral patterns
+
 ✅ Improving customer retention strategies
+
 ✅ Supporting targeted marketing campaigns
+
 ✅ Enabling data-driven customer engagement
+
 ✅ Delivering stakeholder-ready executive insights
+
 ✅ Automating customer segment prediction and explainability
 
 ---
