@@ -4,7 +4,7 @@
 
 from fastapi import FastAPI
 
-from src.api.routes import router
+from api.routes import router
 
 # =========================================
 # FASTAPI APPLICATION

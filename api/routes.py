@@ -8,7 +8,7 @@ import shap
 
 from fastapi import APIRouter
 
-from src.api.schemas import CustomerRequest
+from api.schemas import CustomerRequest
 
 from src.modelling.segment_classifier import (
     SegmentClassifier
