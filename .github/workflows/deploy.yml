@@ -46,10 +46,9 @@ jobs:
           ${{ secrets.DOCKER_USERNAME }}/apex-backend-app:latest
 
       # =========================================
-      # DEPLOY TO EC2
+      # DEPLOY TO AWS EC2
       # =========================================
       - name: Deploy To AWS EC2
-
         run: |
 
           mkdir -p ~/.ssh
@@ -58,13 +57,8 @@ jobs:
 
           chmod 600 ~/.ssh/id_rsa
 
-          ssh -o "StrictHostChecking=no" \
-          ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
-
-            export MONGO_URI="${{ secrets.MONGO_URI }}"
-            export MLFLOW_TOKEN="${{ secrets.MLFLOW_TOKEN }}"
-
-            cd ~/app
+          ssh -o "StrictHostKeyChecking=no" \
+          ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << EOF
 
             docker pull ${{ secrets.DOCKER_USERNAME }}/apex-backend-app:latest
 
@@ -75,8 +69,8 @@ jobs:
             docker run -d \
               --name apex-backend-app \
               -p 8000:8000 \
-              -e MONGO_URI="$MONGO_URI" \
-              -e MLFLOW_TOKEN="$MLFLOW_TOKEN" \
+              -e MONGO_URI="${{ secrets.MONGO_URI }}" \
+              -e MLFLOW_TOKEN="${{ secrets.MLFLOW_TOKEN }}" \
               ${{ secrets.DOCKER_USERNAME }}/apex-backend-app:latest
 
           EOF
