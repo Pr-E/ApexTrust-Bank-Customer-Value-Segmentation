@@ -58,7 +58,7 @@ jobs:
 
           chmod 600 ~/.ssh/id_rsa
 
-          ssh -o StrictHostChecking=no \
+          ssh -o "StrictHostChecking=no" \
           ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
 
             export MONGO_URI="${{ secrets.MONGO_URI }}"
