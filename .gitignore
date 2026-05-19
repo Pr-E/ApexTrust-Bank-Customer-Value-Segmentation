@@ -220,7 +220,6 @@ venv/
 
 .ipynb_checkpoints/
 
-dataset/
 data/raw/
 data/interim/
 data/processed/
