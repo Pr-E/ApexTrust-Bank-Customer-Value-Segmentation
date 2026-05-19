@@ -1,4 +1,4 @@
-name: Deploy APEX TRUST Custome Value Segmentation FastAPI
+name: "Deploy APEX TRUST Customer Value Segmentation FastAPI"
 
 on:
   push:
@@ -6,37 +6,77 @@ on:
       - main
 
 jobs:
+
   deploy:
-  runs-on: ubuntu-latest
 
-  steps:
-  - name: Checkout
-    uses: actiona/checkout@v3
+    runs-on: ubuntu-latest
 
-  - name: Login DockerHub
-    uses: docker/login-action@v2
-    with:
-      username: ${{ secrets.DOCKER_USERNAME }}
-      password: ${{ secrets.DOCKER_PASSWORD }}
+    steps:
 
-  - name: Build image  
-    run: docker build -t ${{ secrets.DOCKER_USERNAME }}/apex-backend-app:latest .
+      # =========================================
+      # CHECKOUT REPOSITORY
+      # =========================================
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-  - name: Push image 
-    run: docker push ${{ secrets.DOCKER_USERNAME }}/apex-backend-app:latest
+      # =========================================
+      # LOGIN TO DOCKER HUB
+      # =========================================
+      - name: Login To DockerHub
+        uses: docker/login-action@v2
 
-  - name: Deploy to EC2
-    run:
-      mkdir -p ~/.ssh
-      echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
-      chmod 600 ~/.ssh/id_rsa
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
-      ssh -o StrictHostChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << EOF
+      # =========================================
+      # BUILD DOCKER IMAGE
+      # =========================================
+      - name: Build Docker Image
+        run: |
+          docker build \
+          -t ${{ secrets.DOCKER_USERNAME }}/apex-backend-app:latest .
 
-      export MONGO_URI="${{ secrets.MONGO_URI }}"
-      export MLFLOW_TOKEN="${{ secrets.MLFLOW_TOKEN }}"
+      # =========================================
+      # PUSH IMAGE TO DOCKER HUB
+      # =========================================
+      - name: Push Docker Image
+        run: |
+          docker push \
+          ${{ secrets.DOCKER_USERNAME }}/apex-backend-app:latest
 
-      cd ~/app
-      ./run.sh
+      # =========================================
+      # DEPLOY TO EC2
+      # =========================================
+      - name: Deploy To AWS EC2
 
-      EOF
+        run: |
+
+          mkdir -p ~/.ssh
+
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
+
+          chmod 600 ~/.ssh/id_rsa
+
+          ssh -o StrictHostChecking=no \
+          ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+
+            export MONGO_URI="${{ secrets.MONGO_URI }}"
+            export MLFLOW_TOKEN="${{ secrets.MLFLOW_TOKEN }}"
+
+            cd ~/app
+
+            docker pull ${{ secrets.DOCKER_USERNAME }}/apex-backend-app:latest
+
+            docker stop apex-backend-app || true
+
+            docker rm apex-backend-app || true
+
+            docker run -d \
+              --name apex-backend-app \
+              -p 8000:8000 \
+              -e MONGO_URI="$MONGO_URI" \
+              -e MLFLOW_TOKEN="$MLFLOW_TOKEN" \
+              ${{ secrets.DOCKER_USERNAME }}/apex-backend-app:latest
+
+          EOF
