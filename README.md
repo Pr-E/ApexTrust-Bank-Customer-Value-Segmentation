@@ -4,125 +4,155 @@
 
 # 📌 Executive Overview
 
-ApexTrust Bank operates in an increasingly data-driven financial ecosystem where customer intelligence, personalization, retention, and behavioral analytics are critical competitive advantages.
+ApexTrust Bank operates within an increasingly data-driven financial ecosystem where customer intelligence, personalization, retention, and behavioural analytics are critical competitive advantages.
 
-This project delivers an end-to-end **Customer Intelligence & Segmentation Platform** that combines:
+This project delivers an end-to-end **Customer Intelligence & Segmentation Platform** designed to transform raw transactional banking data into actionable behavioural, operational, and strategic business intelligence.
 
-* RFM Behavioral Analytics
-* K-Means Customer Segmentation
-* Customer Segment Classification
-* Executive Business Intelligence Dashboards
-* AI-Generated Strategic Insights
-* Real-Time API Deployment
-* Interactive Streamlit Applications
+The platform combines:
 
-The platform transforms raw transactional banking data into actionable strategic intelligence that supports:
+- RFM Behavioural Analytics
+- Advanced Customer Feature Engineering
+- K-Means Customer Segmentation
+- Random Forest Customer Segment Classification
+- SHAP Explainability
+- FastAPI Backend Deployment
+- Executive Streamlit Dashboards
+- AI-Generated Strategic Insights
+- Docker Containerisation
+- AWS EC2 Cloud Deployment
+- CI/CD Automation with GitHub Actions
 
-* Customer retention
-* Revenue optimization
-* Cross-selling
-* Churn reduction
-* Executive decision-making
-* Personalized banking strategies
+The solution supports:
+
+- Customer retention
+- Revenue optimisation
+- Behavioural intelligence
+- Churn risk monitoring
+- Executive decision-making
+- Cross-selling opportunities
+- Personalised banking strategies
+- Real-time customer analytics
 
 ---
 
 # 🎯 Business Objectives
 
-The primary objective of this project is to build a scalable customer intelligence system capable of:
+The primary objective of this project is to build a scalable customer intelligence platform capable of:
 
-✅ Identifying high-value banking customers
-
-✅ Detecting churn-risk customers early
-
-✅ Understanding customer behavioral patterns
-
-✅ Improving customer retention strategies
-
-✅ Supporting targeted marketing campaigns
-
-✅ Enabling data-driven customer engagement
-
-✅ Delivering stakeholder-ready executive insights
-
-✅ Automating customer segment prediction and explainability
+✅ Identifying high-value banking customers  
+✅ Detecting churn-risk customers early  
+✅ Understanding behavioural engagement patterns  
+✅ Improving customer retention strategies  
+✅ Supporting targeted marketing campaigns  
+✅ Enabling data-driven customer engagement  
+✅ Delivering stakeholder-ready executive intelligence  
+✅ Automating customer segment prediction and explainability  
+✅ Supporting scalable AI-powered banking analytics  
 
 ---
 
 # 🧠 Core Intelligence Systems
 
-This project consists of two major machine learning systems:
+The platform consists of two major machine learning systems:
 
 ---
 
 # 1️⃣ Customer Segmentation Engine (Unsupervised Learning)
 
-A behavioral segmentation engine using:
+A behavioural customer segmentation engine was developed using:
 
-* RFM Analysis
-* K-Means Clustering
+- RFM Analysis
+- K-Means Clustering
 
-to automatically discover hidden customer behavioral groups.
+to automatically discover hidden customer behavioural groups based on transactional activity and engagement behaviour.
+
+---
 
 ## 📊 Generated Customer Segments
 
-| Segment                      | Description                                                 |
-| ---------------------------- | ----------------------------------------------------------- |
-| 🏆 Loyal High-Value Customer | Highly engaged premium customers with strong monetary value |
-| ⚠️ At-Risk Premium Customer  | Previously valuable customers showing churn behavior        |
-| 💳 Active Everyday Customer  | Highly active customers with moderate monetary contribution |
-| 💤 Low Engagement Customer   | Low-frequency and low-value customers requiring engagement  |
+| Segment | Description |
+|---|---|
+| 🏆 Loyal High-Value Customer | Highly engaged premium customers with strong monetary contribution |
+| ⚠️ At-Risk Premium Customer | Previously valuable customers displaying churn behaviour |
+| 💳 Active Everyday Customer | Highly active customers with moderate monetary contribution |
+| 💤 Low Engagement Customer | Low-frequency, low-engagement customers requiring activation |
+
+---
+
+## 📈 Segmentation Intelligence
+
+The segmentation engine enables:
+
+- Behavioural customer profiling
+- Revenue concentration analysis
+- Customer engagement monitoring
+- Retention risk detection
+- Segment-level strategic recommendations
 
 ---
 
 # 2️⃣ Customer Segment Classification Engine (Supervised Learning)
 
-A production-ready Random Forest Classification Model was developed to classify customers into their respective customer segments.
+A production-ready Random Forest Classification Model was developed to automatically classify customers into behavioural customer segments.
+
+---
 
 ## 🔍 Classification Features
 
-The model predicts customer segments using:
+The classifier predicts customer segments using:
 
-* Recency
-* Frequency
-* Monetary Value
-* Customer Age
-* Account Balance
-* RFM Scores
-* Behavioral Features
+- Recency
+- Frequency
+- Monetary Value
+- Customer Age
+- Account Balance
+- RFM Scores
+- Behavioural Features
+- Customer Intelligence Metrics
 
-## ✅ Model Capabilities
+---
 
-* Real-time segment prediction
-* Customer value classification
-* Automated business recommendations
-* SHAP explainability
-* Human-readable business reports
-* Feature contribution analysis
+## ✅ Classification Capabilities
+
+The classification system supports:
+
+- Real-time customer segment prediction
+- Automated business recommendations
+- Feature contribution analysis
+- SHAP explainability
+- Human-readable customer intelligence reports
+- Customer value classification
+- Behavioural risk interpretation
 
 ---
 
 # 🧠 Explainable AI (XAI)
 
-To ensure transparency and business interpretability, the project integrates:
+To improve transparency and business interpretability, the project integrates SHAP Explainability.
 
-## 🔹 SHAP Explainability
+---
 
-The system automatically explains:
+## 🔹 SHAP Explainability Engine
 
-* Why a customer belongs to a segment
-* Key behavioral drivers
-* Positive contribution factors
-* Negative risk indicators
-* Recommended business actions
+The explainability system automatically identifies:
 
-### Example Business Explanations
+- Why a customer belongs to a segment
+- Key behavioural drivers
+- Positive value indicators
+- Negative churn indicators
+- Recommended business actions
+- Segment-level behavioural influences
 
-The platform generates insights such as:
+---
 
-* High transaction frequency increased customer value
-* Long inactivity period increased churn risk
-* High account balance positively influenced premium classification
+## 📋 Example AI Explanations
+
+The system generates business-friendly explanations such as:
+
+- High transaction frequency increased customer value
+- Increasing inactivity elevated churn risk
+- Strong account balance positively influenced premium classification
+- Low engagement reduced customer value scoring
 
 ---
 
@@ -130,12 +160,12 @@ The platform generates insights such as:
 
 A fully interactive executive dashboard was developed using:
 
-* Streamlit
-* Matplotlib
-* Seaborn
-* Plotly
+- Streamlit
+- Matplotlib
+- Seaborn
+- Plotly
 
-The dashboard delivers stakeholder-ready business intelligence and customer analytics.
+The dashboard provides stakeholder-ready customer intelligence and business analytics.
 
 ---
 
@@ -143,95 +173,107 @@ The dashboard delivers stakeholder-ready business intelligence and customer anal
 
 ## 🔹 Customer Segmentation Overview
 
-* Customer segment distribution
-* Segment size analysis
-* Segment heatmaps
-* Customer population analytics
+- Customer segment distribution
+- Segment size analysis
+- Customer population analytics
+- Behavioural segmentation summaries
+
+---
 
 ## 🔹 Customer Behaviour Intelligence
 
-* RFM score analysis
-* Engagement matrix
-* Recency vs Monetary analysis
-* Customer behavior radar charts
-* RFM behavioral comparisons
+- RFM score analysis
+- Engagement matrix analytics
+- Recency vs Monetary analysis
+- Behavioural distribution analysis
+- Customer activity intelligence
+
+---
 
 ## 🔹 Revenue Intelligence
 
-* Revenue distribution donut charts
-* Revenue concentration analysis
-* Revenue vs customer percentage analysis
-* Profitability intelligence
+- Revenue distribution donut charts
+- Revenue concentration analysis
+- Segment-level profitability analysis
+- Revenue contribution intelligence
+
+---
 
 ## 🔹 Retention Intelligence
 
-* Customer retention risk matrix
-* Recency heatmaps
-* Dormant customer detection
-* At-risk premium customer monitoring
+- Customer churn risk monitoring
+- Recency heatmaps
+- Dormant customer detection
+- At-risk premium customer analysis
 
-## 🔹 AI-Generated Executive Insights
+---
 
-The dashboard automatically generates strategic intelligence such as:
+## 🔹 AI-Generated Strategic Insights
 
-* Highest revenue-generating segment
-* Largest customer population
-* Highest churn-risk segment
-* Most engaged customer segment
-* Strategic growth opportunities
+The dashboard automatically generates executive intelligence including:
+
+- Highest revenue-generating segment
+- Largest customer population
+- Highest retention-risk segment
+- Most active customer segment
+- Strategic growth opportunities
+- Behavioural engagement insights
 
 ---
 
 # ⚙️ Machine Learning Workflow
 
+---
+
 ## 1️⃣ Data Acquisition
 
-* Connected to MongoDB / SQLite databases
-* Extracted transactional banking data
-* Loaded into Pandas DataFrames
+- Connected to MongoDB / SQLite databases
+- Extracted transactional banking data
+- Loaded data into Pandas DataFrames
 
 ---
 
 ## 2️⃣ Data Cleaning & Preprocessing
 
-* Missing value handling
-* Duplicate removal
-* Date/time standardization
-* Feature scaling
-* Outlier handling
+- Missing value handling
+- Duplicate removal
+- Date/time standardisation
+- Feature scaling
+- Outlier handling
+- Data quality validation
 
 ---
 
 ## 3️⃣ Exploratory Data Analysis (EDA)
 
-Performed comprehensive customer analytics including:
+Performed comprehensive analytics including:
 
-* Transaction trends
-* Spending behavior
-* Customer demographics
-* Monetary distributions
-* Frequency analysis
-* Behavioral outlier detection
+- Transaction trends
+- Customer spending behaviour
+- Monetary distributions
+- Behavioural outlier analysis
+- Engagement analysis
+- Customer demographic exploration
 
 ---
 
 ## 4️⃣ Feature Engineering
 
-Developed advanced customer intelligence features including:
+Developed advanced behavioural intelligence features including:
 
 ### RFM Features
 
-* Recency
-* Frequency
-* Monetary
+- Recency
+- Frequency
+- Monetary
 
 ### Additional Features
 
-* Customer age
-* Account balance
-* Customer lifetime value
-* RFM score levels
-* Behavioral indicators
+- Customer age
+- Account balance
+- Customer lifetime value indicators
+- RFM score levels
+- Behavioural indicators
 
 ---
 
@@ -239,9 +281,9 @@ Developed advanced customer intelligence features including:
 
 Applied:
 
-* K-Means Clustering
-* Elbow Method
-* Silhouette Score Analysis
+- K-Means Clustering
+- Elbow Method
+- Silhouette Score Analysis
 
 to determine optimal customer clusters.
 
@@ -249,15 +291,15 @@ to determine optimal customer clusters.
 
 ## 6️⃣ Segment Profiling
 
-Generated detailed customer segment profiles including:
+Generated detailed customer intelligence profiles including:
 
-* Average recency
-* Frequency patterns
-* Monetary behavior
-* Customer counts
-* Revenue contribution
-* Account balance intelligence
-* Customer value levels
+- Average recency
+- Transaction frequency
+- Monetary behaviour
+- Revenue contribution
+- Customer counts
+- Behavioural engagement
+- Account balance intelligence
 
 ---
 
@@ -265,76 +307,114 @@ Generated detailed customer segment profiles including:
 
 Built a supervised learning pipeline using:
 
-* Random Forest Classifier
-* Train/Test Split
-* Hyperparameter Optimization
-* Feature Importance Analysis
-* SHAP Explainability
+- Random Forest Classifier
+- Train/Test Split
+- Hyperparameter Optimisation
+- Feature Importance Analysis
+- SHAP Explainability
 
 ---
 
-# 🚀 API Deployment
+# 🚀 FastAPI Backend Deployment
 
-A production-ready FastAPI service was developed for:
+A production-ready FastAPI backend service was developed for:
 
-* Customer segmentation APIs
-* Dashboard APIs
-* Real-time predictions
-* Model retraining
-* Data refresh pipelines
+- Customer segmentation APIs
+- Dashboard APIs
+- Real-time customer predictions
+- Model retraining
+- Data refresh pipelines
+- Executive dashboard delivery
 
-## Available API Endpoints
+---
 
-| Endpoint     | Description               |
-| ------------ | ------------------------- |
-| `/dashboard` | Executive dashboard       |
-| `/segments`  | Segmentation output       |
-| `/refresh`   | Refresh pipeline cache    |
-| `/retrain`   | Retrain clustering model  |
-| `/docs`      | Swagger API documentation |
+## 📡 API Endpoints
+
+| Endpoint | Description |
+|---|---|
+| `/` | API health route |
+| `/dashboard` | Executive intelligence dashboard |
+| `/segments` | Segmentation output |
+| `/refresh` | Refresh segmentation pipeline |
+| `/retrain` | Retrain clustering model |
+| `/docs` | Swagger API documentation |
 
 ---
 
 # 💻 Streamlit Applications
 
-Two interactive applications were developed:
+Two interactive Streamlit applications were developed.
+
+---
 
 ## 1️⃣ Customer Segment Classifier App
 
-Allows users to:
+The classifier application enables users to:
 
-* Input customer attributes
-* Predict customer segment
-* View SHAP explanations
-* Receive business recommendations
+- Input customer attributes
+- Predict behavioural customer segments
+- View SHAP explainability
+- Receive automated business recommendations
+- Generate customer intelligence reports
 
 ---
 
 ## 2️⃣ Executive Intelligence Dashboard
 
-Provides:
+The executive dashboard provides:
 
-* Real-time visual analytics
-* Executive KPIs
-* Revenue intelligence
-* Retention intelligence
-* Customer behavior monitoring
+- Real-time behavioural analytics
+- Executive KPI monitoring
+- Revenue intelligence
+- Retention intelligence
+- Behavioural engagement analysis
+- Strategic customer insights
+
+---
+
+# ☁️ Deployment & MLOps
+
+The platform was containerised and deployed using modern MLOps workflows.
+
+---
+
+## 🔹 Deployment Stack
+
+- Docker
+- AWS EC2
+- GitHub Actions CI/CD
+- FastAPI
+- Streamlit
+
+---
+
+## 🔹 CI/CD Pipeline
+
+Implemented automated deployment workflows including:
+
+- Docker image builds
+- DockerHub image publishing
+- EC2 deployment automation
+- Container orchestration
+- Automated backend refresh workflows
 
 ---
 
 # 📊 Key Business Insights
 
-The project uncovered several strategic business insights:
+Several strategic customer intelligence insights emerged throughout the project:
 
-✅ A small percentage of customers contributes the majority of revenue
+✅ A relatively small percentage of customers contributes the majority of estimated revenue  
 
-✅ High-value customers exhibit significantly higher transaction frequency and monetary behavior
+✅ High-value customers consistently demonstrate stronger behavioural engagement and transaction frequency  
 
-✅ At-risk premium customers represent major revenue leakage opportunities
+✅ At-risk premium customers represent significant revenue leakage opportunities  
 
-✅ Behavioral inactivity strongly correlates with customer churn risk
+✅ Increasing recency strongly correlates with churn risk behaviour  
 
-✅ Active everyday customers provide strong engagement opportunities for cross-selling and digital banking adoption
+✅ Behavioural engagement is often a stronger customer value indicator than account balance alone  
+
+✅ Active everyday customers provide strong cross-selling and digital banking opportunities  
 
 ---
 
@@ -342,90 +422,80 @@ The project uncovered several strategic business insights:
 
 ## Programming
 
-* Python
+- Python
 
 ## Machine Learning
 
-* Scikit-learn
-* SHAP
+- Scikit-learn
+- SHAP
 
 ## Data Processing
 
-* Pandas
-* NumPy
+- Pandas
+- NumPy
 
-## Data Visualization
+## Data Visualisation
 
-* Matplotlib
-* Seaborn
-* Plotly
+- Matplotlib
+- Seaborn
+- Plotly
 
 ## Backend & APIs
 
-* FastAPI
+- FastAPI
 
 ## Dashboarding
 
-* Streamlit
+- Streamlit
 
-## Database
+## Databases
 
-* MongoDB
-* SQLite3
+- MongoDB
+- SQLite3
 
-## Deployment
+## Deployment & MLOps
 
-* Docker
-* AWS EC2
-* Render
+- Docker
+- AWS EC2
+- GitHub Actions
+- DockerHub
 
 ## Version Control
 
-* Git & GitHub
+- Git & GitHub
 
 ---
 
 # 📁 Project Structure
 
 ```text
-📦 apextrust-customer-segmentation
+📦 ApexTrust-Bank-Customer-Value-Segmentation
 ┣ 📂 api
 ┃ ┣ 📜 visualisation_main.py
-┃ ┗ 📜 prediction_api.py
+┃ ┗ 📜 main.py
 ┃
-┣ 📂 dashboard
+┣ 📂 app
 ┃ ┣ 📜 streamlit_dashboard.py
-┃ ┗ 📜 customer_classifier_app.py
-┃
-┣ 📂 models
-┃ ┣ 📜 clustering_model.pkl
-┃ ┣ 📜 random_forest_classifier.pkl
-┃ ┗ 📜 scaler.pkl
-┃
-┣ 📂 notebooks
-┃ ┣ 📜 eda.ipynb
-┃ ┗ 📜 experimentation.ipynb
+┃ ┗ 📜 streamlit_app.py
 ┃
 ┣ 📂 src
-┃ ┣ 📂 modelling
-┃ ┃ ┣ 📜 clusters.py
-┃ ┃ ┣ 📜 segments.py
-┃ ┃ ┗ 📜 classifier.py
-┃ ┃
-┃ ┣ 📂 visualization
-┃ ┃ ┣ 📜 customer_segment.py
-┃ ┃ ┗ 📜 customer_segment_performance.py
-┃ ┃
+┃ ┣ 📂 connections
+┃ ┣ 📂 data
 ┃ ┣ 📂 explainability
-┃ ┃ ┗ 📜 customer_segment_explainer.py
-┃ ┃
-┃ ┗ 📂 preprocessing
+┃ ┣ 📂 features
+┃ ┣ 📂 modelling
+┃ ┣ 📂 utils
+┃ ┗ 📂 visualization
 ┃
-┣ 📂 data
-┣ 📂 assets
-┣ 📜 requirements.txt
+┣ 📂 dataset
+┃
+┣ 📂 .github\workflows
+┃ ┗ 📜 deploy.yml
+┃
 ┣ 📜 Dockerfile
+┣ 📜 requirements.txt
 ┣ 📜 README.md
+┣ 📜 setup.py
 ┗ 📜 .gitignore
 ```
 
@@ -435,13 +505,14 @@ The project uncovered several strategic business insights:
 
 This platform provides ApexTrust Bank with:
 
-* Enterprise-grade customer intelligence
-* Explainable machine learning analytics
-* Automated customer segmentation
-* Revenue optimization insights
-* Retention risk monitoring
-* Executive decision intelligence
-* Scalable AI-powered customer analytics infrastructure
+- Enterprise-grade customer intelligence
+- Explainable machine learning analytics
+- Automated behavioural segmentation
+- Revenue optimisation intelligence
+- Retention risk monitoring
+- Executive stakeholder reporting
+- AI-powered customer analytics infrastructure
+- Scalable cloud-ready ML deployment
 
 ---
 
@@ -449,15 +520,11 @@ This platform provides ApexTrust Bank with:
 
 Potential future enhancements include:
 
-* Real-time streaming analytics
-* Customer lifetime value prediction
-* Deep learning customer embeddings
-* Personalised financial product recommendation
-* Churn prediction modeling
-* Cloud-native MLOps deployment
-* CI/CD automation
-* Automated retraining pipelines
-
+- Real-time streaming customer analytics
+- Customer lifetime value prediction
+- Churn prediction models
+- Deep learning behavioural embeddings
+- Automated retraining pipelines
 
 ---
 
@@ -465,15 +532,16 @@ Potential future enhancements include:
 
 Developed as an end-to-end customer intelligence and machine learning engineering project focused on:
 
-* Banking analytics
-* Customer intelligence
-* Explainable AI
-* Behavioral segmentation
-* Production-grade ML systems
-* Executive stakeholder reporting
+- Banking analytics
+- Behavioural intelligence
+- Explainable AI
+- Production-grade ML systems
+- Executive stakeholder reporting
+- Customer value optimisation
+- Scalable AI deployment systems
 
 ---
 
 # ⭐ Final Outcome
 
-This project successfully demonstrates how machine learning, behavioral analytics, explainable AI, and executive dashboards can be integrated into a unified customer intelligence platform capable of driving measurable business impact in modern banking environments.
+This project demonstrates how machine learning, behavioural analytics, explainable AI, cloud deployment, and executive business intelligence can be integrated into a unified customer intelligence platform capable of driving measurable business impact within modern banking environments.
