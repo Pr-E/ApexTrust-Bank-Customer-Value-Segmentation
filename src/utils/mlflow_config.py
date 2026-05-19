@@ -21,7 +21,7 @@ def setup_mlflow():
     if not dagshub_token:
         raise EnvironmentError("The Mlflow token cant't be accessed...")
     
-    os.environ["MLFLOE_TRACKING_USERNAME"] = dagshub_token
+    os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
     os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
 
     repo_owner = "ejirogoro27"

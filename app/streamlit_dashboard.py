@@ -26,6 +26,9 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
+# CONFIG
+API_BASE = "http://13.62.100.198:8000"
+
 
 # =========================================
 # PAGE CONFIGURATION
