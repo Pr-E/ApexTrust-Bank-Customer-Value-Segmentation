@@ -1,21 +1,6 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv(override = True)
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-
-apex_model_name = "Apex_Trust_model"
-
-
-
-
-
-import os
-from dotenv import load_dotenv
-
 load_dotenv(override=True)
 
 # =========================
