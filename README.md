@@ -1,8 +1,8 @@
-# 🏦 ApexTrust Bank Customer Intelligence & Segmentation Platform
+# ApexTrust Bank Customer Intelligence & Segmentation Platform
 
 ---
 
-# 📌 Executive Overview
+# Executive Overview
 
 ApexTrust Bank operates within an increasingly data-driven financial ecosystem where customer intelligence, personalization, retention, and behavioural analytics are critical competitive advantages.
 
@@ -35,7 +35,7 @@ The solution supports:
 
 ---
 
-# 🎯 Business Objectives
+# Business Objectives
 
 The primary objective of this project is to build a scalable customer intelligence platform capable of:
 
@@ -51,13 +51,13 @@ The primary objective of this project is to build a scalable customer intelligen
 
 ---
 
-# 🧠 Core Intelligence Systems
+# Core Intelligence Systems
 
 The platform consists of two major machine learning systems:
 
 ---
 
-# 1️⃣ Customer Segmentation Engine (Unsupervised Learning)
+# 1️. Customer Segmentation Engine (Unsupervised Learning)
 
 A behavioural customer segmentation engine was developed using:
 
@@ -68,18 +68,18 @@ to automatically discover hidden customer behavioural groups based on transactio
 
 ---
 
-## 📊 Generated Customer Segments
+## Generated Customer Segments
 
 | Segment | Description |
 |---|---|
-| 🏆 Loyal High-Value Customer | Highly engaged premium customers with strong monetary contribution |
-| ⚠️ At-Risk Premium Customer | Previously valuable customers displaying churn behaviour |
-| 💳 Active Everyday Customer | Highly active customers with moderate monetary contribution |
-| 💤 Low Engagement Customer | Low-frequency, low-engagement customers requiring activation |
+| Loyal High-Value Customer | Highly engaged premium customers with strong monetary contribution |
+| At-Risk Premium Customer | Previously valuable customers displaying churn behaviour |
+| Active Everyday Customer | Highly active customers with moderate monetary contribution |
+| Low Engagement Customer | Low-frequency, low-engagement customers requiring activation |
 
 ---
 
-## 📈 Segmentation Intelligence
+## Segmentation Intelligence
 
 The segmentation engine enables:
 
@@ -91,13 +91,13 @@ The segmentation engine enables:
 
 ---
 
-# 2️⃣ Customer Segment Classification Engine (Supervised Learning)
+# 2️. Customer Segment Classification Engine (Supervised Learning)
 
 A production-ready Random Forest Classification Model was developed to automatically classify customers into behavioural customer segments.
 
 ---
 
-## 🔍 Classification Features
+## Classification Features
 
 The classifier predicts customer segments using:
 
@@ -112,7 +112,7 @@ The classifier predicts customer segments using:
 
 ---
 
-## ✅ Classification Capabilities
+## Classification Capabilities
 
 The classification system supports:
 
@@ -126,13 +126,13 @@ The classification system supports:
 
 ---
 
-# 🧠 Explainable AI (XAI)
+# Explainable AI (XAI)
 
 To improve transparency and business interpretability, the project integrates SHAP Explainability.
 
 ---
 
-## 🔹 SHAP Explainability Engine
+## SHAP Explainability Engine
 
 The explainability system automatically identifies:
 
@@ -145,7 +145,7 @@ The explainability system automatically identifies:
 
 ---
 
-## 📋 Example AI Explanations
+## Example AI Explanations
 
 The system generates business-friendly explanations such as:
 
@@ -156,7 +156,7 @@ The system generates business-friendly explanations such as:
 
 ---
 
-# 📊 Executive Intelligence Dashboard
+# Executive Intelligence Dashboard
 
 A fully interactive executive dashboard was developed using:
 
@@ -169,9 +169,9 @@ The dashboard provides stakeholder-ready customer intelligence and business anal
 
 ---
 
-# 📈 Dashboard Capabilities
+# Dashboard Capabilities
 
-## 🔹 Customer Segmentation Overview
+## Customer Segmentation Overview
 
 - Customer segment distribution
 - Segment size analysis
@@ -180,7 +180,7 @@ The dashboard provides stakeholder-ready customer intelligence and business anal
 
 ---
 
-## 🔹 Customer Behaviour Intelligence
+## Customer Behaviour Intelligence
 
 - RFM score analysis
 - Engagement matrix analytics
@@ -190,7 +190,7 @@ The dashboard provides stakeholder-ready customer intelligence and business anal
 
 ---
 
-## 🔹 Revenue Intelligence
+## Revenue Intelligence
 
 - Revenue distribution donut charts
 - Revenue concentration analysis
@@ -199,7 +199,7 @@ The dashboard provides stakeholder-ready customer intelligence and business anal
 
 ---
 
-## 🔹 Retention Intelligence
+## Retention Intelligence
 
 - Customer churn risk monitoring
 - Recency heatmaps
@@ -208,7 +208,7 @@ The dashboard provides stakeholder-ready customer intelligence and business anal
 
 ---
 
-## 🔹 AI-Generated Strategic Insights
+## AI-Generated Strategic Insights
 
 The dashboard automatically generates executive intelligence including:
 
@@ -221,11 +221,11 @@ The dashboard automatically generates executive intelligence including:
 
 ---
 
-# ⚙️ Machine Learning Workflow
+# Machine Learning Workflow
 
 ---
 
-## 1️⃣ Data Acquisition
+## 1️. Data Acquisition
 
 - Connected to MongoDB / SQLite databases
 - Extracted transactional banking data
@@ -233,7 +233,7 @@ The dashboard automatically generates executive intelligence including:
 
 ---
 
-## 2️⃣ Data Cleaning & Preprocessing
+## 2️. Data Cleaning & Preprocessing
 
 - Missing value handling
 - Duplicate removal
@@ -244,7 +244,7 @@ The dashboard automatically generates executive intelligence including:
 
 ---
 
-## 3️⃣ Exploratory Data Analysis (EDA)
+## 3️. Exploratory Data Analysis (EDA)
 
 Performed comprehensive analytics including:
 
@@ -257,7 +257,7 @@ Performed comprehensive analytics including:
 
 ---
 
-## 4️⃣ Feature Engineering
+## 4️. Feature Engineering
 
 Developed advanced behavioural intelligence features including:
 
@@ -277,7 +277,7 @@ Developed advanced behavioural intelligence features including:
 
 ---
 
-## 5️⃣ Customer Segmentation
+## 5️. Customer Segmentation
 
 Applied:
 
@@ -289,7 +289,7 @@ to determine optimal customer clusters.
 
 ---
 
-## 6️⃣ Segment Profiling
+## 6️. Segment Profiling
 
 Generated detailed customer intelligence profiles including:
 
@@ -303,7 +303,7 @@ Generated detailed customer intelligence profiles including:
 
 ---
 
-## 7️⃣ Customer Classification
+## 7️. Customer Classification
 
 Built a supervised learning pipeline using:
 
@@ -315,7 +315,7 @@ Built a supervised learning pipeline using:
 
 ---
 
-# 🚀 FastAPI Backend Deployment
+# FastAPI Backend Deployment
 
 A production-ready FastAPI backend service was developed for:
 
@@ -328,7 +328,7 @@ A production-ready FastAPI backend service was developed for:
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Endpoint | Description |
 |---|---|
@@ -341,13 +341,13 @@ A production-ready FastAPI backend service was developed for:
 
 ---
 
-# 💻 Streamlit Applications
+# Streamlit Applications
 
 Two interactive Streamlit applications were developed.
 
 ---
 
-## 1️⃣ Customer Segment Classifier App
+## 1️. Customer Segment Classifier App
 
 The classifier application enables users to:
 
@@ -359,7 +359,7 @@ The classifier application enables users to:
 
 ---
 
-## 2️⃣ Executive Intelligence Dashboard
+## 2️. Executive Intelligence Dashboard
 
 The executive dashboard provides:
 
@@ -372,13 +372,13 @@ The executive dashboard provides:
 
 ---
 
-# ☁️ Deployment & MLOps
+# Deployment & MLOps
 
 The platform was containerised and deployed using modern MLOps workflows.
 
 ---
 
-## 🔹 Deployment Stack
+## Deployment Stack
 
 - Docker
 - AWS EC2
@@ -388,7 +388,7 @@ The platform was containerised and deployed using modern MLOps workflows.
 
 ---
 
-## 🔹 CI/CD Pipeline
+## CI/CD Pipeline
 
 Implemented automated deployment workflows including:
 
@@ -400,7 +400,7 @@ Implemented automated deployment workflows including:
 
 ---
 
-# 📊 Key Business Insights
+# Key Business Insights
 
 Several strategic customer intelligence insights emerged throughout the project:
 
@@ -418,7 +418,7 @@ Several strategic customer intelligence insights emerged throughout the project:
 
 ---
 
-# 🛠️ Technology Stack
+# Technology Stack
 
 ## Programming
 
@@ -501,7 +501,7 @@ Several strategic customer intelligence insights emerged throughout the project:
 
 ---
 
-# 📈 Strategic Business Value
+# Strategic Business Value
 
 This platform provides ApexTrust Bank with:
 
@@ -516,7 +516,7 @@ This platform provides ApexTrust Bank with:
 
 ---
 
-# 🔮 Future Improvements
+# Future Improvements
 
 Potential future enhancements include:
 
@@ -528,7 +528,8 @@ Potential future enhancements include:
 
 ---
 
-# 👩‍💻 Author
+# Author
+Prisicllia Ejiro
 
 Developed as an end-to-end customer intelligence and machine learning engineering project focused on:
 
@@ -542,6 +543,6 @@ Developed as an end-to-end customer intelligence and machine learning engineerin
 
 ---
 
-# ⭐ Final Outcome
+# Final Outcome
 
 This project demonstrates how machine learning, behavioural analytics, explainable AI, cloud deployment, and executive business intelligence can be integrated into a unified customer intelligence platform capable of driving measurable business impact within modern banking environments.
